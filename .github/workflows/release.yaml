@@ -77,7 +77,7 @@ jobs:
         run: |
           VERSION=$(node -p "require('./package.json').version")
           git add .
-          git commit -m "[v${VERSION}-SNAPSHOT](https://github.com/${{ github.repository }}/releases/tag/v${VERSION}-SNAPSHOT)"
+          git commit -m "chore(release): [ v${VERSION}-SNAPSHOT ]"
 
       - name: Create tag
         if: steps.changesets.outputs.has_changesets == 'true'
